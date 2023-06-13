@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springboot-project-alldemo</artifactId>
+        <groupId>com.jason</groupId>
+        <version>1.0.4.RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>demo-spring-boot-example</artifactId>
+    <packaging>pom</packaging>
+
+    <description>该项目的demo项目,不进行版本控制</description>
+    <modules>
+        <module>demo-spring-boot-example-java</module>
+        <module>demo-spring-boot-example-easyExcel</module>
+        <module>demo-spring-boot-example-rocketmq</module>
+        <module>demo-spring-boot-example-redisson</module>
+        <module>demo-spring-boot-example-pay</module>
+        <module>demo-spring-boot-elk</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!--Hutool Java工具包-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+
+
+    </dependencies>
+</project>
