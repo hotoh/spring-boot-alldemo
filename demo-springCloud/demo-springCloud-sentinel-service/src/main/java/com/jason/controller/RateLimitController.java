@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 限流功能
- * Created by jason on 2019/11/7.
+ * Created by jason on 2023/11/7.
  */
 @RestController
 @RequestMapping("/rateLimit")

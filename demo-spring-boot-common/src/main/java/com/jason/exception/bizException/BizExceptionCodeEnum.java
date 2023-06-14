@@ -6,7 +6,7 @@ package com.jason.exception.bizException;
  * @Param :
  * @Return :
  * @Author : SheldonPeng
- * @Date : 2019-10-11
+ * @Date : 2023-10-11
  */
 public enum BizExceptionCodeEnum implements BizExceptionCode{
 
@@ -32,7 +32,7 @@ public enum BizExceptionCodeEnum implements BizExceptionCode{
      * @Param : [code, message]
      * @Return :
      * @Author : SheldonPeng
-     * @Date : 2019-10-11
+     * @Date : 2023-10-11
      */
     BizExceptionCodeEnum(String code,String message){
 

@@ -5,7 +5,7 @@ package com.jason.exception.bizException;
  * @Param :
  * @Return :
  * @Author : SheldonPeng
- * @Date : 2019-10-11
+ * @Date : 2023-10-11
  */
 public class BizException extends RuntimeException{
 
@@ -18,7 +18,7 @@ public class BizException extends RuntimeException{
      * @Param : [errorCode]
      * @Return :
      * @Author : SheldonPeng
-     * @Date : 2019-10-11
+     * @Date : 2023-10-11
      */
     public BizException(final BizExceptionCode exceptionCode) {
         super(exceptionCode.getMessage());
@@ -29,7 +29,7 @@ public class BizException extends RuntimeException{
      * @Param : [detailedMessage]
      * @Return :
      * @Author : SheldonPeng
-     * @Date : 2019-10-11
+     * @Date : 2023-10-11
      */
     public BizException(final String message) {
         super(message);

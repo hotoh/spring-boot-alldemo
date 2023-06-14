@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * 熔断功能
- * Created by jason on 2019/11/7.
+ * Created by jason on 2023/11/7.
  */
 @RestController
 @RequestMapping("/breaker")

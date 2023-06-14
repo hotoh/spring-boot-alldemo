@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by jason on 2019/9/5.
+ * Created by jason on 2023/9/5.
  */
 @FeignClient(value = "demo-springCloud-sentinel-client",fallback = UserFallbackService.class)
 public interface UserService {

@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by jason on 2019/8/29.
+ * Created by jason on 2023/8/29.
  */
 @RestController
 @RequestMapping("/user")

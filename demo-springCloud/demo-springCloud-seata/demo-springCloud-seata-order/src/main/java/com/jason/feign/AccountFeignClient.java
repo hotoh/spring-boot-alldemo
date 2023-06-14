@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  *
  * @author zhangjianwei
  * @version 1.0
- * @date 2019/8/28 4:05 PM
+ * @date 2023/8/28 4:05 PM
  */
 @FeignClient(name = "account-service")
 public interface AccountFeignClient {

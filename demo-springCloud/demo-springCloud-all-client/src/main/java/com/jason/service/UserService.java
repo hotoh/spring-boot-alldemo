@@ -7,7 +7,7 @@ import com.jason.domain.User;
 import java.util.List;
 
 /**
- * Created by jason on 2019/8/29.
+ * Created by jason on 2023/8/29.
  */
 public interface UserService {
     void create(User user);

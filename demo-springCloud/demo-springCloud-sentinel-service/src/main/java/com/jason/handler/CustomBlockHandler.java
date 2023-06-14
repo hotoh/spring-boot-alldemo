@@ -4,7 +4,7 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.jason.domain.CommonResult;
 
 /**
- * Created by jason on 2019/11/7.
+ * Created by jason on 2023/11/7.
  */
 public class CustomBlockHandler {
 

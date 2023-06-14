@@ -6,7 +6,7 @@ package com.jason.exception.bizException;
  * @Param :
  * @Return :
  * @Author : SheldonPeng
- * @Date : 2019-10-11
+ * @Date : 2023-10-11
  */
 
 public interface BizExceptionCode {
@@ -16,7 +16,7 @@ public interface BizExceptionCode {
      * @Param : []
      * @Return : java.lang.String
      * @Author : SheldonPeng
-     * @Date : 2019-10-11
+     * @Date : 2023-10-11
      */
     String getCode();
 
@@ -25,7 +25,7 @@ public interface BizExceptionCode {
      * @Param : []
      * @Return : java.lang.String
      * @Author : SheldonPeng
-     * @Date : 2019-10-11
+     * @Date : 2023-10-11
      */
     String getMessage();
 
