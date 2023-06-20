@@ -1,6 +1,6 @@
 package com.jason.transaction;
 
-import com.jason.message.MessageTransaction;
+import com.jason.message.MessageObjectTransaction;
 import com.jason.transaction.mapper.TransactionMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
@@ -25,7 +25,7 @@ public class TransactionProducer {
     private TransactionMapper transactionMapper;
 
     public void produce() {
-        MessageTransaction<String> message = new MessageTransaction<>();
+        MessageObjectTransaction<String> message = new MessageObjectTransaction<>();
         //在真正的业务中 Aid和Bid应该是前端已经知道是啥，传给后端,比如A的userId和B的UserId
         message.setAId(UUID.randomUUID().toString());
         message.setBId(UUID.randomUUID().toString());

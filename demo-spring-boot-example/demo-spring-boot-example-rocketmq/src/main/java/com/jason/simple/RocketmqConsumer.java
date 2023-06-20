@@ -1,6 +1,6 @@
 package com.jason.simple;
 
-import com.jason.message.Message;
+import com.jason.message.MessageObject;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.spring.annotation.MessageModel;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
@@ -20,10 +20,10 @@ public class RocketmqConsumer {
      */
     @Component
     @RocketMQMessageListener(topic = "topic-queue-one", consumerGroup = "consumer_topic-queue-one",messageModel = MessageModel.CLUSTERING)
-    public class ConsumerOne implements RocketMQListener<Message> {
+    public class ConsumerOne implements RocketMQListener<MessageObject> {
         @Override
-        public void onMessage(Message message) {
-            log.info("consumer-one received message: {}", message);
+        public void onMessage(MessageObject messageObject) {
+            log.info("consumer-one received message: {}", messageObject);
         }
     }
 
@@ -42,11 +42,11 @@ public class RocketmqConsumer {
      */
     @Component
 //    @RocketMQMessageListener(topic = "async-one", consumerGroup = "consumer_topic-queue-three")
-    public class ConsumerThree implements RocketMQListener<Message> {
+    public class ConsumerThree implements RocketMQListener<MessageObject> {
         @Override
-        public void onMessage(Message message) {
+        public void onMessage(MessageObject messageObject) {
             System.out.println("哈哈哈哈我进来消费  async-one 消息啦");
-            log.info("consumer-two received message: {}", message);
+            log.info("consumer-two received message: {}", messageObject);
         }
     }
 

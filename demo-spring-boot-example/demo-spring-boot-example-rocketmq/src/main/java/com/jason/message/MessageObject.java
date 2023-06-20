@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @date 2023/04/04
  */
 @Data
-public class Message<T> implements Serializable {
+public class MessageObject<T> implements Serializable {
     private String Id;
     private T content;
 }

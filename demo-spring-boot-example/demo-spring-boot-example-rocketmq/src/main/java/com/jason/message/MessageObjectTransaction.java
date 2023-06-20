@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @date 2023/04/04
  */
 @Data
-public class MessageTransaction<T> extends Message<T>  implements Serializable  {
+public class MessageObjectTransaction<T> extends MessageObject<T> implements Serializable  {
     private String aId;
     private String bId;
     private T content;

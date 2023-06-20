@@ -12,3 +12,19 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/jason-data?useUnicode=true&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useUnicode=yes&characterEncoding=utf8
     username: root
     password: root
+  cloud:
+    stream:
+      bindings:
+        input:
+          content-type: application/json
+          destination: test-topic
+          group: test-group
+        output:
+          content-type: application/json
+          destination: test-topic
+      rocketmq:
+        binder:
+          name-server: 127.0.0.1:9876
+logging:
+  level:
+    org.springframework.context.support: debug

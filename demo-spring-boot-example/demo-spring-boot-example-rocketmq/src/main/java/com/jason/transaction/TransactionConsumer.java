@@ -1,7 +1,7 @@
 package com.jason.transaction;
 
 
-import com.jason.message.MessageTransaction;
+import com.jason.message.MessageObjectTransaction;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
@@ -14,10 +14,10 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @RocketMQMessageListener(topic = "topic-tx", consumerGroup = "tx-consumer-group")
-public class TransactionConsumer implements RocketMQListener<MessageTransaction> {
+public class TransactionConsumer implements RocketMQListener<MessageObjectTransaction> {
 
     @Override
-    public void onMessage(MessageTransaction message) {
+    public void onMessage(MessageObjectTransaction message) {
         log.info("topic-tx received message: {}", message);
         log.info("消费端开始消费信息 执行B服务加100操作");
         //执行B服务加100的操作

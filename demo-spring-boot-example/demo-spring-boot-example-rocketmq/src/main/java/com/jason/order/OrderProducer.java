@@ -1,6 +1,6 @@
 package com.jason.order;
 
-import com.jason.message.Message;
+import com.jason.message.MessageObject;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.stereotype.Component;
 
@@ -41,48 +41,48 @@ public class OrderProducer {
      * hashKey为订单id
      */
     public void testSendSyncOrderly1() {
-        Message<String> stringMessage = new Message<>();
-        stringMessage.setId(id1);
+        MessageObject<String> stringMessageObject = new MessageObject<>();
+        stringMessageObject.setId(id1);
         String message = "10";
-        stringMessage.setContent(message);
+        stringMessageObject.setContent(message);
         // 模拟有序消费
-        rocketMQTemplate.syncSendOrderly("topic-orderly", stringMessage, id1);
+        rocketMQTemplate.syncSendOrderly("topic-orderly", stringMessageObject, id1);
     }
 
     /***
      * hashKey为订单id
      */
     public void testSendSyncOrderly2() {
-        Message<String> stringMessage = new Message<>();
-        stringMessage.setId(id2);
+        MessageObject<String> stringMessageObject = new MessageObject<>();
+        stringMessageObject.setId(id2);
         String message = "20";
-        stringMessage.setContent(message);
+        stringMessageObject.setContent(message);
         // 模拟有序消费
-        rocketMQTemplate.syncSendOrderly("topic-orderly", stringMessage, id2);
+        rocketMQTemplate.syncSendOrderly("topic-orderly", stringMessageObject, id2);
     }
 
     /***
      * hashKey为订单id
      */
     public void testSendSyncOrderly3() {
-        Message<String> stringMessage = new Message<>();
-        stringMessage.setId(id1);
+        MessageObject<String> stringMessageObject = new MessageObject<>();
+        stringMessageObject.setId(id1);
         String message = "30";
-        stringMessage.setContent(message);
+        stringMessageObject.setContent(message);
         // 模拟有序消费
-        rocketMQTemplate.syncSendOrderly("topic-orderly", stringMessage, id1);
+        rocketMQTemplate.syncSendOrderly("topic-orderly", stringMessageObject, id1);
     }
 
     /***
      * hashKey为订单id
      */
     public void testSendSyncOrderly4() {
-        Message<String> stringMessage = new Message<>();
-        stringMessage.setId(id2);
+        MessageObject<String> stringMessageObject = new MessageObject<>();
+        stringMessageObject.setId(id2);
         String message = "40";
-        stringMessage.setContent(message);
+        stringMessageObject.setContent(message);
         // 模拟有序消费
-        rocketMQTemplate.syncSendOrderly("topic-orderly", stringMessage, id2);
+        rocketMQTemplate.syncSendOrderly("topic-orderly", stringMessageObject, id2);
     }
 
 
